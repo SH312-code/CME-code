@@ -33,9 +33,9 @@ public class Main {
             System.out.println(a.getDate() + "\t" + a.getTotalCMEEnergy() + "\t"+a.getMeanCMEEnergy());
         }
 
-        FileWriter fw = new FileWriter("CME_Data_Month_TotalKE_MeanKE.csv",true);
+        FileWriter fw = new FileWriter("CME_Data_Month_TotalKE_MeanKE_Count.csv",true);
         for(CMEsInMonth a: CMEs){
-            fw.write(a.getDate() + "," + a.getTotalCMEEnergy() + ","+a.getMeanCMEEnergy() + "\n");
+            fw.write(a.getDate() + "," + a.getTotalCMEEnergy() + ","+a.getMeanCMEEnergy() +","+ a.getCMECount() + "\n");
         }
         fw.close();
     }

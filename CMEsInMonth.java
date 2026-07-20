@@ -32,4 +32,8 @@ public class CMEsInMonth {
             return BigDecimal.ZERO;
         }
     }
+
+    public int getCMECount() {
+        return CMECount;
+    }
 }
