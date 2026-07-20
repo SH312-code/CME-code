@@ -35,7 +35,7 @@ public class Main {
 
         FileWriter fw = new FileWriter("CME_Data_Month_TotalKE_MeanKE.csv",true);
         for(CMEsInMonth a: CMEs){
-            fw.write(a.getDate() + "\t" + a.getTotalCMEEnergy() + "\t"+a.getMeanCMEEnergy() + "\n");
+            fw.write(a.getDate() + "," + a.getTotalCMEEnergy() + ","+a.getMeanCMEEnergy() + "\n");
         }
         fw.close();
     }
