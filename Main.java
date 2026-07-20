@@ -4,6 +4,7 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.io.File;
+
 public class Main {
     public static void main(String[] args) throws IOException {
         Scanner s = new Scanner(new File("CME_Date_KE.csv"));
@@ -33,13 +34,13 @@ public class Main {
             System.out.println(a.getDate() + "\t" + a.getTotalCMEEnergy() + "\t"+a.getMeanCMEEnergy());
         }
 
-//        FileWriter fw = new FileWriter("CME_Data_Month_TotalKE_MeanKE_Count.csv",true);
-//        for(CMEsInMonth a: CMEs){
-//            fw.write(a.getDate() + "," + a.getTotalCMEEnergy() + ","+a.getMeanCMEEnergy() +","+ a.getCMECount() + "\n");
-//        }
-//        fw.close();
+        FileWriter fw = new FileWriter("CME_Data_Month_TotalKE_MeanKE_Count.csv",true);
+        for(CMEsInMonth a: CMEs){
+            fw.write(a.getDate() + "," + a.getTotalCMEEnergy() + ","+a.getMeanCMEEnergy() +","+ a.getCMECount() + "\n");
+        }
+        fw.close();
 
-        FileWriter fw = new FileWriter("CME_Data_Month_A-E_scale_v2.csv",false);
+        fw = new FileWriter("CME_Data_Month_A-E_scale_v2.csv",false);
         fw.write("Date,Type A count,Type B count,Type C count,Type D count,Type E count\n");
         for(CMEsInMonth a: CMEs){
             fw.write(a.getDate() + "," + a.getAcount() + ","+a.getBcount() +","+ a.getCcount()+","+a.getDcount() + ","+a.getEcount() + "\n");
