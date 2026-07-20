@@ -29,14 +29,14 @@ public class CMEsInMonth {
     public void addCME(BigDecimal KE) {
         totalCMEEnergy = totalCMEEnergy.add(KE);
         CMECount++;
-        double L = (Math.log10(KE.doubleValue()/Math.pow(10,23)));
-        if (L <= 2) {
+        double L = (Math.log10(KE.doubleValue()/Math.pow(10,27)));
+        if (L < 1) {
             Acount++;
-        } else if (L <= 4) {
+        } else if (L < 2 ) {
             Bcount++;
-        } else if (L <= 6) {
+        } else if (L < 3) {
             Ccount++;
-        } else if (L <= 8) {
+        } else if (L < 4) {
             Dcount++;
         } else {
             Ecount++;
