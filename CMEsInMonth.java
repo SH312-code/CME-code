@@ -2,7 +2,7 @@ import java.math.BigDecimal;
 import java.math.RoundingMode;
 
 public class CMEsInMonth {
-    private String date;
+    private final String date;
     private int CMECount;
     private BigDecimal totalCMEEnergy;
 
