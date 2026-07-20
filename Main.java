@@ -39,7 +39,7 @@ public class Main {
 //        }
 //        fw.close();
 
-        FileWriter fw = new FileWriter("CME_Data_Month_A-E_scale.csv",true);
+        FileWriter fw = new FileWriter("CME_Data_Month_A-E_scale_v2.csv",false);
         fw.write("Date,Type A count,Type B count,Type C count,Type D count,Type E count\n");
         for(CMEsInMonth a: CMEs){
             fw.write(a.getDate() + "," + a.getAcount() + ","+a.getBcount() +","+ a.getCcount()+","+a.getDcount() + ","+a.getEcount() + "\n");
